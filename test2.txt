@@ -1,3 +1,5 @@
 car
 alma
 meyve
+limon 
+armud
