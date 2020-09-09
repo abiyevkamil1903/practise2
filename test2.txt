@@ -4,3 +4,5 @@ meyve
 limon 
 armud
 car
+armud
+orange
