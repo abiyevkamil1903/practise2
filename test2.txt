@@ -1,9 +1,5 @@
 car
 alma
 meyve
-<<<<<<< HEAD
-armud
-=======
 limon 
 armud
->>>>>>> 2c02a3037bb223bbe7030abfae237aa20df8b004
