@@ -208,4 +208,120 @@ public class MyMath
 	}
 	
 	
+	
+	
+	public static int romanToInteger(String s)
+	{
+		Map<Character, Integer> map = new HashMap<>();
+		
+		map.put('I',1);
+        map.put('V',5);
+        map.put('X',10);
+        map.put('L',50);
+        map.put('C',100);
+        map.put('D',500);
+        map.put('M',1000);
+        
+		int result = 0;
+        for(int i = 0; i < s.length(); i++){
+            if(i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i - 1)))
+            {
+                result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i - 1));
+            }else{
+                result += map.get(s.charAt(i));
+            }
+            
+        }
+        return result;
+	}
+	
+	
+	
+	static String toRomanNumeral(int number){
+		Map<Character, Integer> map = new HashMap<>();
+		
+		map.put('I',1);
+        map.put('V',5);
+        map.put('X',10);
+        map.put('L',50);
+        map.put('C',100);
+        map.put('D',500);
+        map.put('M',1000);
+        
+        String result = "";
+        while(number > 0){
+            if(number >= 1000){
+                result = result.concat("M");
+                number -= 1000;
+            }else if(number < 1000 && number >= 100){
+                if(number >= 900)
+                {
+                    result = result.concat("CM");
+                    number -= 900;
+                }
+                else if(number >= 500 && number < 900)
+                {
+                    result = result.concat("D");
+                    number -= 500;
+                }
+                else if(number < 500 && number >= 400)
+                {
+                    result = result.concat("CD");
+                    number -= 400;
+                }
+                else
+                {
+                    result = result.concat("C");
+                    number -= 100;
+                }
+            }else if (number < 100 && number >= 10){
+                if(number >= 90)
+                {
+                    result = result.concat("XC");
+                    number -= 90;
+                }
+                else if(number >= 50 && number < 90)
+                {
+                    result = result.concat("L");
+                    number -= 50;
+                }
+                else if(number < 50 && number >= 40)
+                {
+                    result = result.concat("XL");
+                    number -= 40;
+                }
+                else
+                {
+                    result = result.concat("X");
+                    number -= 10;
+                }
+            } else{
+                if(number == 9)
+                {
+                    result = result.concat("IX");
+                    number -= 9;
+                }
+                else if(number >= 5 && number < 9)
+                {
+                    result = result.concat("V");
+                    number -= 5;
+                }
+                else if(number == 4)
+                {
+                    result = result.concat("IV");
+                    number -= 4;
+                }
+                else
+                {
+                    result = result.concat("I");
+                    number -= 1;
+                }
+            }
+        }
+        return result;
+    }
+	
+	
+	
+	
 }
