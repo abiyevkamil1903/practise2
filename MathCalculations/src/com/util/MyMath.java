@@ -321,10 +321,8 @@ public class MyMath
         return result;
     }
 	
-	public static double nRoot(double number, int degree)
-	{
-		return Math.pow(number, 1.0 / degree);
-	}
+	
+	
 	
 	
 	

@@ -1,10 +1,13 @@
 import com.util.MyMath;
-import static java.lang.System.out;
 
 public class Main {
 
 	public static void main(String[] args) {
-		out.println(MyMath.nRoot(8, 3));
+		int var1 = MyMath.romanToInteger("X");
+		int var2 = MyMath.romanToInteger("V");
+		int sum = var1 + var2;
+		System.out.println(sum);
+		System.out.println(MyMath.toRomanNumeral(sum));
 		
 	}
 
