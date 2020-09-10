@@ -5,7 +5,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		out.println(MyMath.nRoot(8, 3));
-		
+		out.println(MyMath.factorial("3"));
 	}
 
 }

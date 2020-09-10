@@ -1,6 +1,7 @@
 package com.util;
 
 import java.util.*;
+import java.math.BigInteger;
 
 public class MyMath 
 {
@@ -326,7 +327,16 @@ public class MyMath
 		return Math.pow(number, 1.0 / degree);
 	}
 	
+	static BigInteger factorial(BigInteger bigint){
+        if(bigint.equals(BigInteger.ZERO))
+            return BigInteger.ONE;
+        return bigint.multiply(factorial(bigint.subtract(BigInteger.ONE)));
+    }
 	
+	public static BigInteger factorial(String n)
+	{
+		return factorial(new BigInteger(n));
+	}
 	
 	
 	
