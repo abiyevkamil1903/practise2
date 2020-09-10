@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="logo.jpg">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="far fa-window-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href=""><li>Home</li></a>
+                    <a href=""><li>About</li></a>
+                    <a href=""><li>Recipe</li></a>
+                    
+                </ul>
+                <button type="button" class="btn">SIGN UP</button>
+                <button type="button" class="btn">SIGN IN</button>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </div>
+        <div class="banner-title">
+            <h1>Food <span> doesn't have <br> a religion.</span> It is a religion.</h1>
+            <button type="button" class="btn">Explore</button>
+        </div>
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <i class="fas fa-list-ul"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="contents">
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolores!</small>
+                <p><a href="">Prev</a> <a href="">Next</a></p>
+            </div>
+            <div class="notifications-img">
+                <img src="small-image.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="">
+        var show = document.getElementById('nav-links');
+        function showMenu() {
+            show.style.right = "0";
+        }
+        function closeMenu() {
+            show.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
