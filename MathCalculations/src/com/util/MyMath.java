@@ -237,7 +237,7 @@ public class MyMath
 	
 	
 	
-	static String toRomanNumeral(int number){
+	public static String toRomanNumeral(int number){
 		Map<Character, Integer> map = new HashMap<>();
 		
 		map.put('I',1);
