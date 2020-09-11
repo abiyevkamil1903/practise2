@@ -4,7 +4,11 @@ import tool.DynamicList;
 import static java.lang.System.out;
 
 import java.awt.List;
+import java.security.spec.DSAGenParameterSpec;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 public class Main {
 	public static void main(String[] args)
 	{
@@ -18,9 +22,6 @@ public class Main {
 		list.add(20);
 		list.add(30);
 		list.add(20);
-		out.println(list);
-		out.println("10: " + list.count(10));
-		out.println("20: " + list.count(20));
-		out.println("30: " + list.count(30));
+		
 	}
 }

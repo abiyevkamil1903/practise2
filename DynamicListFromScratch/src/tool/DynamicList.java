@@ -2,8 +2,6 @@ package tool;
 
 import static java.lang.System.out;
 
-import java.util.Arrays;
-
 public class DynamicList<E> 
 {
 	private Object[] items;
