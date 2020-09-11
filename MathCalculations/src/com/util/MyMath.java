@@ -10,7 +10,7 @@ public class MyMath
 		if(a == 0) return b;
         if(b == 0) return a;
         
-		int min = java.lang.Math.min(a, b);
+		int min = Math.min(a, b);
 		int max = (a + b) - min;
 		
 		while(true)
