@@ -103,4 +103,13 @@ public class DynamicList<E>
 		}
 		return this;
 	}
+	
+	public boolean contains(E element)
+	{
+		for(Object item : this.items)
+			if(item.equals(element))
+				return true;
+		
+		return false;
+	}
 }
