@@ -12,6 +12,7 @@ public class Main {
 		out.println(list);
 		list.remove(30);
 		out.println(list);
+		out.println(list.indexOf(20));
 		
 	}
 }

@@ -112,4 +112,12 @@ public class DynamicList<E>
 		
 		return false;
 	}
+	
+	public int indexOf(E element)
+	{
+		for(int i = 0; i < this.size; i++)
+			if (this.items[i].equals(element))
+				return i;
+		return -1;
+	}
 }
