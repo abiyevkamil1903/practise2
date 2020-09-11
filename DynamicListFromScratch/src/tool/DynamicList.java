@@ -57,6 +57,8 @@ public class DynamicList<E>
 	
 	@Override
 	public String toString() {
+		if(this.size == 0)
+			return "[]";
 		String result = "[";
 		int i;
 		for (i = 0; i < this.size - 1; i++)
@@ -116,6 +118,12 @@ public class DynamicList<E>
 			if (this.items[i].equals(element))
 				return i;
 		return -1;
+	}
+	
+	public void clear()
+	{
+		this.items = new Object[this.items.length];
+		this.size = 0;
 	}
 	
 }
