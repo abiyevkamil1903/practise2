@@ -22,7 +22,8 @@ public class Main {
 		list.add(5);
 		out.println(list);
 		ArrayList l = new ArrayList();
-		
+		list.clear();
+		out.println(list.isEmpty());
 		
 	}
 }

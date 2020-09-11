@@ -126,4 +126,10 @@ public class DynamicList<E>
 		this.size = 0;
 	}
 	
+	public boolean isEmpty()
+	{
+		return (this.size == 0) ? true : false;
+	}
+	
+	
 }
