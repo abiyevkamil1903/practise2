@@ -66,4 +66,13 @@ public class DynamicList<E>
 		result += this.items[i] + "]";
 		return result;
 	}
+	
+	public E get(int index)
+	{
+		if(index >= size)
+			throw new ArrayIndexOutOfBoundsException(index);
+		
+		return (E)this.items[index];
+	}
+	
 }
