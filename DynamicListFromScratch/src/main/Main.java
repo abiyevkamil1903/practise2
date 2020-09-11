@@ -12,18 +12,15 @@ public class Main {
 		list.add(10);
 		list.add(20);
 		list.add(30);
+		list.add(10);
+		list.add(10);
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(20);
 		out.println(list);
-		list.remove(50);
-		out.println(list);
-		DynamicList<Integer> tempList = list;
-		list.clear();
-		out.println(list.equals(tempList));
-		out.println(list);
-		list.add(5);
-		out.println(list);
-		ArrayList l = new ArrayList();
-		list.clear();
-		out.println(list.isEmpty());
-		
+		out.println("10: " + list.count(10));
+		out.println("20: " + list.count(20));
+		out.println("30: " + list.count(30));
 	}
 }

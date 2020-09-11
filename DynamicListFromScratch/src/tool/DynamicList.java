@@ -126,6 +126,17 @@ public class DynamicList<E>
 		this.size = 0;
 	}
 	
+	public int count(E element)
+	{
+		int counter = 0;
+		
+		for(Object item : this.items)
+			if((E)item == element)
+				counter++;
+		
+		return counter;
+	}
+	
 	public boolean isEmpty()
 	{
 		return (this.size == 0) ? true : false;
