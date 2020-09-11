@@ -75,4 +75,9 @@ public class DynamicList<E>
 		return (E)this.items[index];
 	}
 	
+	public DynamicList<E> set(int index, E item)
+	{
+		this.items[index] = item;
+		return this;
+	}
 }
