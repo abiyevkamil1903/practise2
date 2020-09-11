@@ -9,8 +9,8 @@ public class Main {
 		list.add(10);
 		list.add(20);
 		list.add(30);
-		list.add(40);
-		list.add(50).add(60).add(70).add(80).add(90).add(100).add(110);
+		out.println(list);
+		list.removeAt(0);
 		out.println(list);
 		
 	}

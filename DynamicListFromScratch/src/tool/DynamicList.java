@@ -69,7 +69,7 @@ public class DynamicList<E>
 	
 	public E get(int index)
 	{
-		if(index >= size)
+		if(index >= this.size)
 			throw new ArrayIndexOutOfBoundsException(index);
 		
 		return (E)this.items[index];
@@ -77,7 +77,20 @@ public class DynamicList<E>
 	
 	public DynamicList<E> set(int index, E item)
 	{
+		if(index < 0 || index >= this.size)
+			return this;
 		this.items[index] = item;
+		return this;
+	}
+	public 	DynamicList<E> removeAt(int index)
+	{
+		if (index >= this.size)
+			throw new ArrayIndexOutOfBoundsException(index);
+		for(int i = index; i < this.size - 1; i++)
+			this.items[i] = this.items[i + 1];
+		
+		this.size--;
+		
 		return this;
 	}
 }
