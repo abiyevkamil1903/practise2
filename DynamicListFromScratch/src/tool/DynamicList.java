@@ -2,6 +2,8 @@ package tool;
 
 import static java.lang.System.out;
 
+import java.util.Arrays;
+
 public class DynamicList<E> 
 {
 	private Object[] items;
@@ -53,4 +55,15 @@ public class DynamicList<E>
 		return this;
 	}
 	
+	@Override
+	public String toString() {
+		String result = "[";
+		int i;
+		for (i = 0; i < this.size - 1; i++)
+		{
+			result += this.items[i] + ", ";
+		}
+		result += this.items[i] + "]";
+		return result;
+	}
 }
