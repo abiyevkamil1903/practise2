@@ -84,6 +84,8 @@ public class DynamicList<E>
 	}
 	public 	DynamicList<E> removeAt(int index)
 	{
+		if(index < 0)
+			return this;
 		if (index >= this.size)
 			throw new ArrayIndexOutOfBoundsException(index);
 		for(int i = index; i < this.size - 1; i++)
@@ -96,12 +98,7 @@ public class DynamicList<E>
 	
 	public DynamicList<E> remove(E element)
 	{
-		for(int i = 0; i < this.size; i++)
-		{
-			if(this.items[i].equals(element))
-				return this.removeAt(i);
-		}
-		return this;
+		return this.removeAt(this.indexOf(element));
 	}
 	
 	public boolean contains(E element)
@@ -120,4 +117,5 @@ public class DynamicList<E>
 				return i;
 		return -1;
 	}
+	
 }

@@ -10,9 +10,8 @@ public class Main {
 		list.add(20);
 		list.add(30);
 		out.println(list);
-		list.remove(30);
+		list.remove(50);
 		out.println(list);
-		out.println(list.indexOf(20));
 		
 	}
 }
