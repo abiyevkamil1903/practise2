@@ -93,4 +93,14 @@ public class DynamicList<E>
 		
 		return this;
 	}
+	
+	public DynamicList<E> remove(E element)
+	{
+		for(int i = 0; i < this.size; i++)
+		{
+			if(this.items[i].equals(element))
+				return this.removeAt(i);
+		}
+		return this;
+	}
 }

@@ -10,7 +10,7 @@ public class Main {
 		list.add(20);
 		list.add(30);
 		out.println(list);
-		list.removeAt(0);
+		list.remove(30);
 		out.println(list);
 		
 	}
