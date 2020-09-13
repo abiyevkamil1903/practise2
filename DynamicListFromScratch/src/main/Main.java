@@ -20,6 +20,10 @@ public class Main {
 		out.println(list.indexOf(10));
 		out.println(list.lastIndexOf(10));
 		out.println(list.last());
+		list.removeLast();
+		out.println(list);
+		out.println(list.count(10));
+		out.println(list.reversed());
 		
 	}
 }

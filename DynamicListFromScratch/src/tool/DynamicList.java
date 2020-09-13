@@ -23,6 +23,7 @@ public class DynamicList<E>
 			throw new IllegalArgumentException("Illegal capacity");
 		}
 	}
+	
 	public int size()
 	{
 		return size;
@@ -68,12 +69,17 @@ public class DynamicList<E>
 		return result;
 	}
 	
-	public E get(int index)
+	public Object get(int index)
 	{
 		if(index >= this.size)
 			throw new ArrayIndexOutOfBoundsException(index);
 		
-		return (E)this.items[index];
+		return this.items[index];
+	}
+	
+	public Object first()
+	{
+		return this.get(0);
 	}
 	
 	public DynamicList<E> set(int index, E item)
@@ -83,23 +89,28 @@ public class DynamicList<E>
 		this.items[index] = item;
 		return this;
 	}
-	public 	DynamicList<E> removeAt(int index)
+	
+	public 	Object removeAt(int index)
 	{
-		if(index < 0)
-			return this;
-		if (index >= this.size)
+		if (index >= this.size || index < 0)
 			throw new ArrayIndexOutOfBoundsException(index);
+		Object temp = this.items[index];
 		for(int i = index; i < this.size - 1; i++)
 			this.items[i] = this.items[i + 1];
 		
 		this.size--;
 		
-		return this;
+		return temp;
 	}
 	
-	public DynamicList<E> remove(E element)
+	public Object remove(E element)
 	{
 		return this.removeAt(this.indexOf(element));
+	}
+	
+	public Object removeLast()
+	{
+		return this.removeAt(this.size - 1);
 	}
 	
 	public boolean contains(E element)
@@ -135,12 +146,12 @@ public class DynamicList<E>
 		this.size = 0;
 	}
 	
-	public int count(E element)
+	public int count(Object element)
 	{
 		int counter = 0;
 		
 		for(Object item : this.items)
-			if((E)item == element)
+			if(item == element)
 				counter++;
 		
 		return counter;
@@ -156,5 +167,16 @@ public class DynamicList<E>
 		return  this.items[this.size - 1];
 	}
 	
+	public DynamicList<E> reversed()
+	{
+		Object[] newList = new Object[this.items.length];
+		for(int i = this.size - 1, j = 0; i >= 0; i--, j++)
+		{
+			newList[j] = this.items[i];
+		}
+		this.items = newList;
+		
+		return this;
+	}
 	
 }
