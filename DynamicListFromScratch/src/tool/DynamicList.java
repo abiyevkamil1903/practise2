@@ -11,6 +11,7 @@ public class DynamicList<E>
 	{	
 		this(10);
 	}
+
 	public DynamicList(int initialCapacity)
 	{	
 		if(initialCapacity > 0)
@@ -115,6 +116,16 @@ public class DynamicList<E>
 		for(int i = 0; i < this.size; i++)
 			if (this.items[i].equals(element))
 				return i;
+		
+		return -1;
+	}
+	
+	public int lastIndexOf(E element)
+	{
+		for(int i = this.size - 1; i >= 0; i--)
+			if (this.items[i].equals(element))
+				return i;
+		
 		return -1;
 	}
 	
@@ -138,6 +149,11 @@ public class DynamicList<E>
 	public boolean isEmpty()
 	{
 		return (this.size == 0) ? true : false;
+	}
+	
+	public Object last()
+	{
+		return  this.items[this.size - 1];
 	}
 	
 	
