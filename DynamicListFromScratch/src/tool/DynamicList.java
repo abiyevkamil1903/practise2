@@ -2,6 +2,8 @@ package tool;
 
 import static java.lang.System.out;
 
+import java.util.List;
+
 public class DynamicList<E> 
 {
 	private Object[] items;
@@ -214,6 +216,19 @@ public class DynamicList<E>
 	{
 		
 		if(this.size != list.size)
+			return false;
+		
+		for(int i = 0; i < this.size; i++)
+		{
+			if(this.items[i] != list.get(i))
+				return false;
+		}
+		return true;
+	}
+	
+	public boolean equals(List<E> list)
+	{
+		if(this.size != list.size())
 			return false;
 		
 		for(int i = 0; i < this.size; i++)

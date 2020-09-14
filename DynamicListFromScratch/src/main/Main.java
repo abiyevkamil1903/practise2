@@ -2,6 +2,9 @@ package main;
 import tool.DynamicList;
 
 import static java.lang.System.out;
+
+import java.util.ArrayList;
+import java.util.List;
 public class Main {
 	public static int[] returnArray() {
 		return new int[] {1,2,3,4,5};
@@ -45,5 +48,7 @@ public class Main {
 		out.println(isEqual);
 		list.removeAt(4);
 		out.println(list.equals(list2));
+		List<Integer> l = new ArrayList<>();
+		l.forEach(out::println);
 	}
 }
