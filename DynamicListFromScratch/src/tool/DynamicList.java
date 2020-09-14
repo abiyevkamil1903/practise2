@@ -58,6 +58,7 @@ public class DynamicList<E>
 		{
 			this.increaseCapacity();
 		}
+		
 		items[size++] = item;
 		return this;
 	}
@@ -66,13 +67,17 @@ public class DynamicList<E>
 	public String toString() {
 		if(this.size == 0)
 			return "[]";
+		
 		String result = "[";
+		
 		int i;
 		for (i = 0; i < this.size - 1; i++)
 		{
 			result += this.items[i] + ", ";
 		}
+		
 		result += this.items[i] + "]";
+		
 		return result;
 	}
 	
@@ -93,6 +98,7 @@ public class DynamicList<E>
 	{
 		if(index < 0 || index >= this.size)
 			return this;
+		
 		this.items[index] = item;
 		return this;
 	}
@@ -101,7 +107,9 @@ public class DynamicList<E>
 	{
 		if (index >= this.size || index < 0)
 			throw new ArrayIndexOutOfBoundsException(index);
+		
 		Object temp = this.items[index];
+		
 		for(int i = index; i < this.size - 1; i++)
 			this.items[i] = this.items[i + 1];
 		
