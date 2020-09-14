@@ -17,14 +17,18 @@ public class Main {
 		list.add(50);
 		list.add(60);
 		out.println(list);
-		out.println(list.indexOf(10));
-		out.println(list.lastIndexOf(10));
-		out.println(list.last());
-		list.removeLast();
-		out.println(list);
-		out.println(list.count(10));
-		out.println(list.reversed());
-		//list.clear();
-		out.println(list.isNotEmpty());
+//		out.println(list.indexOf(10));
+//		out.println(list.lastIndexOf(10));
+//		out.println(list.last());
+//		list.removeLast();
+//		out.println(list);
+//		out.println(list.count(10));
+//		out.println(list.reversed());
+//		//list.clear();
+//		out.println(list.isNotEmpty());
+		list.insert(1, 5);
+		out.println("5 added to 1st index " + list);
+		list.insert(0, 90);
+		out.println("90 added to index 0 " + list);
 	}
 }

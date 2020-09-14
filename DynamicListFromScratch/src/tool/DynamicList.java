@@ -37,19 +37,24 @@ public class DynamicList<E>
 		}
 	}
 	
+	void increaseCapacity()
+	{
+		int oldCapacity = this.items.length;
+		int newCapacity = (oldCapacity * 3) / 2 + 1;
+		
+		Object[] newItems = new Object[newCapacity];
+		
+		for(int i = 0; i < size; i++)
+			newItems[i] = this.items[i];
+		
+		this.items = newItems;
+	}
+	
 	public DynamicList<E> add(E item)
 	{
 		if(this.size == this.items.length)
 		{
-			int oldCapacity = this.items.length;
-			int newCapacity = (oldCapacity * 3) / 2 + 1;
-			
-			Object[] newItems = new Object[newCapacity];
-			
-			for(int i = 0; i < size; i++)
-				newItems[i] = this.items[i];
-			
-			this.items = newItems;
+			this.increaseCapacity();
 		}
 		items[size++] = item;
 		return this;
@@ -182,6 +187,27 @@ public class DynamicList<E>
 		this.items = newList;
 		
 		return this;
+	}
+	
+	public void insert(int index, Object element)
+	{
+		if (index >= this.size || index < 0)
+			throw new ArrayIndexOutOfBoundsException("Invalid index");
+		
+		if(this.size == this.items.length)
+		{
+			this.increaseCapacity();
+		}
+		
+		for(int i = this.size; i > index; i--)
+		{
+			this.items[i] = this.items[i - 1];
+		}
+		
+		this.items[index] = element;
+		
+		this.size++;
+		
 	}
 	
 }
