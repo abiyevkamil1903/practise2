@@ -162,6 +162,11 @@ public class DynamicList<E>
 		return (this.size == 0) ? true : false;
 	}
 	
+	public boolean isNotEmpty()
+	{
+		return (this.isEmpty()) ? false : true;
+	}
+	
 	public Object last()
 	{
 		return  this.items[this.size - 1];

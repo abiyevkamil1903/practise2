@@ -24,6 +24,7 @@ public class Main {
 		out.println(list);
 		out.println(list.count(10));
 		out.println(list.reversed());
-		
+		//list.clear();
+		out.println(list.isNotEmpty());
 	}
 }
