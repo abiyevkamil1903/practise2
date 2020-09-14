@@ -210,4 +210,18 @@ public class DynamicList<E>
 		
 	}
 	
+	public boolean equals(DynamicList<E> list) 
+	{
+		
+		if(this.size != list.size)
+			return false;
+		
+		for(int i = 0; i < this.size; i++)
+		{
+			if(this.items[i] != list.get(i))
+				return false;
+		}
+		return true;
+	}
+	
 }

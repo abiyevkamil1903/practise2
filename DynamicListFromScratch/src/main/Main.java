@@ -30,5 +30,20 @@ public class Main {
 		out.println("5 added to 1st index " + list);
 		list.insert(0, 90);
 		out.println("90 added to index 0 " + list);
+		DynamicList<Integer> list2 = new DynamicList<>();
+		list2.add(90);
+		list2.add(10);
+		list2.add(5);
+		list2.add(20);
+		list2.add(30);
+		list2.add(40);
+		list2.add(10);
+		list2.add(50);
+		list2.add(60);
+		
+		boolean isEqual = list.equals(list2);
+		out.println(isEqual);
+		list.removeAt(4);
+		out.println(list.equals(list2));
 	}
 }
